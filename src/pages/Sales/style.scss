@@ -1,0 +1,206 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+
+.sales {
+  // .sales__banner
+  &__banner {
+    background-color: $bgcolorblock;
+    font-family: 'Kumbh Sans', sans-serif;
+    margin-bottom: 95px;
+    .container {
+      padding-top: 55px;
+      padding-bottom: 50px;
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width:992px){
+        flex-direction: column;
+        align-items: center;
+        gap:80px;
+      }
+      @media screen and (max-width:768px){
+        gap:50px;
+      }
+    }
+  }
+  // .sales__banner-left-img
+  &__banner-left-img {
+    padding-bottom: 70px;
+  }
+  // .sales__banner-left-subtitle
+  &__banner-left-subtitle {
+    @include subtitle;
+    padding-bottom: 5px;
+  }
+  // .sales__banner-left-title
+  &__banner-left-title {
+    @include large-title;
+    max-width: 520px;
+    padding-bottom: 20px;
+  }
+  // .sales__banner-left-desc
+  &__banner-left-desc {
+    font-size: 18px;
+    line-height: 29px;
+    color: $descclr;
+    max-width: 545px;
+    padding-bottom: 20px;
+    @media screen and (max-width:992px){
+      padding-bottom: 35px;
+    }
+  }
+  // .sales__banner-left-btn
+  &__banner-left-btn {
+    @media screen and (max-width:992px){
+      text-align: center;
+    }
+    a {
+      @include green-btn-main;
+      padding: 9px 73px;
+    }
+    a:hover {
+      @include green-btn-hover;
+    }
+  }
+  // .sales__banner-right-img
+  &__banner-right-img {
+    img {
+      width: 100%;
+      max-width: 462px;
+    }
+  }
+  // .sales__quote
+  &__quote {
+    margin-top: 85px;
+    background-color: $bgcolorblock;
+    font-family: 'Kumbh Sans', sans-serif;
+    .container {
+      padding-top: 50px;
+      padding-bottom: 65px;
+    }
+  }
+  // .sales__quote-top
+  &__quote-top {
+    text-align: center;
+    margin-bottom: 55px;
+  }
+  // .sales__quote-top-subtitle
+  &__quote-top-subtitle {
+    @include subtitle;
+    padding-bottom: 10px;
+  }
+  // .sales__quote-top-title
+  &__quote-top-title {
+    @include middle-title;
+    max-width: 488px;
+    margin: 0 auto;
+  }
+  // .sales__quote-main
+  &__quote-main {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width:992px){
+      flex-direction: column;
+      align-items: center;
+      gap:30px;
+    }
+
+  }
+  // .sales__quote-main-info
+  &__quote-main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  // .sales__quote-main-info-wrapp
+  &__quote-main-info-wrapp {
+    background-color: rgba(255, 255, 255, 1);
+    padding-bottom: 106px;
+    padding: 0 57px 106px 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width:992px){
+      padding:0 27px 106px 27px;
+    }
+    @media screen and (max-width:992px){
+      padding:0 17px 90px 17px;
+    }
+  }
+  // .sales__quote-main-info-title
+  &__quote-main-info-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    color:$titleclr;
+    padding-bottom: 75px;
+    padding-top: 60px;
+    span {
+      text-decoration: underline;
+    }
+  }
+    // .sales__quote-main-info-items
+    &__quote-main-info-items {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  // .sales__quote-main-info-items-item
+  &__quote-main-info-items-item {
+    display: flex;
+    gap: 10px;
+  }
+  // .sales__quote-main-info-items-item-desc
+  &__quote-main-info-items-item-desc {
+    @include subtitle;
+    color: rgba(102, 112, 133, 1);
+    max-width: 300px;
+  }
+  // .sales__guarante
+  &__guarante {
+    margin-top: 155px;
+    margin-bottom: 200px;
+    @media screen and (max-width:768px){
+      margin-top: 100px;
+      margin-bottom: 150px;
+    }
+    font-family: 'Kumbh Sans', sans-serif;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  // .sales__guarante-img
+  &__guarante-img {
+    padding-bottom: 30px;
+    img {
+      width: 100%;
+      max-width: 312px;
+    }
+  }
+  // .sales__guarante-title
+  &__guarante-title {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    color: $titleclr;
+    padding-bottom: 25px;
+    @media screen and (max-width:768px){
+      font-size: 35px;
+      line-height: 43px;
+    }
+    @media screen and (max-width:584px){
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+  // .sales__guarante-desc
+  &__guarante-desc {
+    @include banner-desc;
+    max-width: 540px;
+  }
+}
+

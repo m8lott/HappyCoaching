@@ -1,0 +1,141 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.active-link {
+  border-bottom: 2px solid $bgbtn;
+}
+
+header {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+}
+.header__nav {
+  @media screen and 
+  (max-width:992px){
+display: none;
+  }
+}
+
+.header__logo {
+  @media screen and 
+  (max-width:992px){
+padding-top: 10px;
+  }
+}
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  :nth-child(5) {
+    
+    a {
+      @include green-btn-header;
+      padding: 11px 15px;
+    }
+    a:hover {
+      text-decoration: none;
+      @include green-btn-hover;
+    }
+   }
+}
+
+.header__nav-item {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  a:hover {
+    border-bottom: 2px solid $bgbtn;
+  }
+}
+
+.header__nav-link {
+  color: $descclr;
+}
+
+//adaptive menu
+.header__burger-container {
+  display:none;
+  @media screen and 
+  (max-width:992px){
+    display: flex;
+    margin-left: auto;
+    padding-top: 10px;
+  }
+}
+
+.header__burger {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 28px;
+  height: 12px;
+  @media screen and 
+  (max-width:992px){
+    display: flex;
+  }
+  span {
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: $bgbtn;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $bgbtn;
+    transition: all 0.3s ease 0s;
+   top:0;
+    bottom: 7px;
+  }
+}
+
+.header__mobile-menu {
+  position: absolute;
+  transition: 0.5s ease;
+  transform: translateX(110%);
+  width: 93.5%;
+  padding: 20px;
+  z-index: 100;
+  background-color: $bgbtn;
+ }
+ .header__mobile-menu.active {
+  transform: none;
+ }
+
+ .header__mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFF;
+  font-size: 22px;
+  font-family: 'Kumbh Sans', sans-serif;
+  line-height: 28px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  position: relative;
+  &::after {
+    content: '';
+    height: 1px;
+    width: calc(100% + 40px);
+    background-color: #D9D6D68F;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+  }
+ }
+
+ .header__mobile-menu-body {
+  .header__nav-list {
+    flex-direction: column;
+  }
+ }

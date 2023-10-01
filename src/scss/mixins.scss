@@ -1,0 +1,147 @@
+@import './variables.scss';
+
+@mixin green-btn-main {
+  background-color: $bgbtn;
+  border-radius: 10px;
+  color:$btnclr;
+  font-size: 14px;
+  line-height: 24px;
+  transition: 0.5s;
+  border: 1px solid $btnborder;
+}
+
+@mixin green-btn-header {
+  color: $btnclr;
+  background-color: $bgbtn;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.5s;
+  border: 1px solid $btnborder;
+}
+
+@mixin green-btn-form-etc {
+  font-weight: 500;
+  border-radius: 8px;
+  color: $btnclr;
+  background-color: $bgbtn;
+  border: 1px solid $btnborder;
+  transition: 0.5s;
+}
+
+@mixin green-btn-hover {
+  color: $btnhovercolor;
+  background-color: white;
+}
+
+@mixin large-title {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 86px;
+  color: $titleclr;
+  max-width: 520px;
+  padding-bottom: 18px;
+  @media screen and (max-width:992px){
+    font-size: 65px;
+    line-height: 82px;
+  }
+  @media screen and (max-width:768px){
+    font-size: 50px;
+    line-height: 70px;
+  }
+  @media screen and (max-width:584px){
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+
+@mixin middle-title {
+  color: $titleclr;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+  @media screen and (max-width:992px){
+    font-size: 40px;
+    line-height: 48px;
+  }
+  @media screen and (max-width:768px){
+    font-size: 30px;
+    line-height: 38px;
+  }
+  @media screen and (max-width:584px){
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
+
+@mixin subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  color: $descclr;
+  @media screen and (max-width:992px){
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@mixin services-title {
+  color: rgba(4, 20, 52, 1);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  padding-bottom: 15px;
+}
+
+@mixin services-desc {
+  color: $descclr;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 300px;
+}
+
+@mixin services-item {
+  width: 33.3%;
+    @media screen and (max-width:992px){
+      width: 45%;
+      margin-bottom: 40px;
+       }
+       @media screen and (max-width:768px){
+        width: 100%;
+         }
+}
+
+@mixin services-icon {
+  max-width: 72px;
+    padding-bottom: 30px;
+    @media screen and (max-width:584px){
+    max-width: 62px;
+    }
+}
+
+@mixin banner-desc {
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(74, 85, 108, 0.7);
+  @media screen and (max-width:584px){
+    font-size: 15px;
+    line-height: 25px;
+    }
+}
+
+@mixin promo-title {
+  font-size: 19px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgba(51, 52, 97, 1);
+    padding-bottom: 10px
+}
+
+@mixin small-title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 44px;
+  color: $titleclr;
+  @media screen and (max-width:992px){
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
